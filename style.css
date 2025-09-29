@@ -1,0 +1,208 @@
+:root{
+  --page-bg: #FFFFFF;
+  --card-bg: #2B414F;
+  --title:   #FFFFFF;
+  --label:   #C6B98B;
+  --ghost:   #999999;
+  --primary: #295BFF;
+  --white:   #FFFFFF;
+
+  --radius: 8px;
+  --field-h: 40px;
+
+  --section-pad-top: 32px;
+  --section-pad-x: 40px;
+
+  --gap-md: 24px;
+  --gap-sm: 16px;
+
+  --font:Inter,sans-serif;
+}
+
+*{box-sizing:border-box}
+html,body{height:100%}
+body{
+  margin:0;
+  background:var(--page-bg);
+  color:var(--white);
+  font-family:var(--font);
+  /* line-height:1.4; */
+  -webkit-font-smoothing:antialiased;
+  -moz-osx-font-smoothing:grayscale;
+}
+img{max-width:100%;display:block}
+
+.topbar{
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  padding: 10px var(--section-pad-x);
+  background:#ffffff;
+  color:#0a0a0a;
+}
+
+.brand{display:flex;align-items:center;gap:12px;width:150px;border-radius:50%;}
+
+.user-info{display:flex;align-items:center;}
+.avatar{
+  width:52px;height:52px;border-radius:50%;
+  background:#2B414F;color:#fff;display:grid;place-items:center;font-size:12px;font-weight:600;
+}
+.user-name{padding: 0px 8px;font-size:14px;font-weight:400}
+.lines{
+  display:none;
+}
+.logo-temp{width:20%;margin-left:var(--section-pad-x);margin-right:-20%}
+.dropdown-icon{width:16px;height:16px;}
+.page{
+  padding:var(--section-pad-x);
+}
+
+.card{
+  background:var(--card-bg);
+  border-radius:var(--radius);
+  /* padding: 24px;  */
+  /* mentioned in word */
+  /* max-width: 3000px; */
+  margin: 0 auto;
+}
+
+.card-title{
+  margin:0 0 20px 0;
+  color:var(--title);
+  font-size:24px;
+  font-weight:600; /* semi bold */
+}
+
+.profile-form{display:block}
+.section-label{
+  color:var(--label);
+  font-size:14px;
+  font-weight:500;
+  margin: 20px 0 10px 0;
+}
+
+.form-grid{
+  display:grid;
+  grid-template-columns: 1fr;
+  gap: var(--gap-md);
+}
+
+.field input,
+.select-wrap select{
+  width:100%;
+  height: var(--field-h);
+  padding: 12px 16px;
+  border-radius: 6px;
+  border:1px solid var(--ghost);
+  outline:none;
+  background: transparent;
+  color: #FFFFFF;
+  font-size:14px;
+  font-weight:500;
+  border-radius: 8px;
+}
+.visually-hidden{
+  font-size:14px;
+  font-weight:400;
+  font-family: var(--font);
+  font-style: normal;
+  color: var(--ghost);
+}
+::placeholder{color:var(--ghost)}
+
+.select-wrap{
+  margin-top: 8px;
+  position:relative;
+  font-size:14px;
+  font-weight:400;
+  border-radius: 8px;
+  font-family: var(--font);
+}
+.select-wrap select{
+  -webkit-appearance:none;
+  color: var(--ghost);
+  appearance:none;
+  background-repeat:no-repeat;
+  background-position: right 12px center;
+  background-size: 12px 12px;
+  padding-right: 36px;
+  background-color: var(--card-bg);
+  border-radius: 8px;
+  font-size:14px;
+  font-weight:400;
+  font-family: var(--font);
+
+}
+
+.checkbox-row{
+  display:flex;
+  align-items:center;
+  gap:10px;
+  margin-top: -4px;
+  font-family: var(--font);
+}
+option{
+  background-color: var(--card-bg);
+  color: var(--white);
+}
+optgroup + option{
+  padding-top: 8px;
+  margin-left: -24px;
+}
+.checkbox-row input[type="checkbox"]{
+  width:18px;height:18px;
+  accent-color: var(--ghost);
+  color: var(--ghost);
+}
+.actions{
+  display:flex;
+  justify-content:flex-end;
+  gap: var(--gap-sm);
+  margin-top: 24px;
+}
+.btn{
+  height: var(--field-h);
+  padding: 0 18px;
+  border-radius: 6px;
+  font-size:14px;
+  cursor:pointer;
+  border:1px solid transparent;
+  width: 150px;
+}
+.btn-primary{
+  background:var(--primary);
+  color:var(--white);
+  width: 150px;
+}
+.btn-ghost{
+  /* width: 150px; */
+  background:transparent;
+  border-color:#ffffff;
+  color:#ffffff;
+}
+
+body{overflow-x:hidden}
+@media only screen and (max-width: 767px) {
+  .btn-ghost,.btn-primary{
+    width: 50%;
+  }
+  .card{padding: 28px 28px 32px}
+  .user-meta,.dropdown-icon,.logo-temp{display:none}
+  .lines{
+  display:block;
+}
+}
+
+@media (min-width: 767px){
+  .card{padding: 28px 28px 32px}
+  .form-grid{
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+  .checkbox-row{
+    grid-column: 1 / -1;
+  }
+}
+
+
+

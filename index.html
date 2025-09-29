@@ -1,0 +1,160 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Create Your Profile</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <!-- Top Header -->
+    <header class="topbar">
+      <div class="brand">
+        <img src="./logo.png" alt="TLT" />
+      </div>
+
+      <div class="user-info">
+        <div class="avatar" aria-hidden="true">
+          <img src="./profile.png" alt="JD">
+        </div>
+        <div class="user-meta">
+          <div class="user-name">Dr. John Doe</div>
+        </div>
+        <div class="dropdown-icon" aria-hidden="true">
+          <img src="./down_arrow.png" alt="">
+        </div>
+        <div class="logo-temp" aria-hidden="true">
+          <img src="./logotemp.png" alt="Menu" />
+        </div>
+        <div class="lines">
+          <img src="./lines.svg" alt="lines">
+        </div>
+      </div>
+    </header>
+
+    <main class="page">
+      <section class="card">
+        <h1 class="card-title">Create Your Profile</h1>
+
+        <form class="profile-form" action="#" method="post" novalidate>
+          <div class="form-section">
+            <p class="section-label">Your Name</p>
+            <div class="form-grid">
+              <div class="field">
+                <label for="firstName" class="visually-hidden"></label>
+                <input id="firstName" name="firstName" type="text" placeholder="First Name" />
+              </div>
+
+              <div class="field">
+                <label for="lastName" class="visually-hidden"></label>
+                <input id="lastName" name="lastName" type="text" placeholder="Last Name" />
+              </div>
+            </div>
+          </div>
+
+          <!-- Contact Details -->
+          <div class="form-section">
+            <p class="section-label">Contact Details</p>
+            <div class="form-grid">
+              <div class="field">
+                <label for="email" class="visually-hidden"></label>
+                <input id="email" name="email" type="email" placeholder="Email" />
+              </div>
+
+              <div class="field">
+                <label for="mobile" class="visually-hidden"></label>
+                <input id="mobile" name="mobile" type="tel" placeholder="Mobile No" />
+              </div>
+            </div>
+          </div>
+
+          <!-- Primary Role -->
+          <div class="form-section">
+            <p class="section-label">Select Primary Role:</p>
+            <div class="form-grid">
+              <div class="field">
+                <label for="role" class="visually-hidden">Role</label>
+                <div class="select-wrap">
+                  <select id="role" name="role" aria-label="Role">
+
+                    <optgroup label="Specialist">
+                      <option >Specialist (Owner)</option>
+
+                      <option value="Partner">Specialist (Partner)</option>
+
+                      <option>Specialist (Associate)</option>
+                    </optgroup>
+
+                    <optgroup label="Others">
+                      <option>Others (Hygienist)</option>
+                      <option>Others (Practice Success Director)</option>
+                      <option>Others (Strategic Growth Partner)</option>
+                      <option>Others (Treatment Consultant)</option>
+                      <option>Others (Custom Role)</option>
+                    </optgroup>
+                  </select>
+                </div>
+              </div>
+
+              <div class="field">
+                <label for="specialty" class="visually-hidden">Specialty Type</label>
+                <div class="select-wrap">
+                  <select id="specialty" name="specialty">
+                    <option selected>Select</option>
+                    <option>Periodontist</option>
+                    <option>Endodontist</option>
+                    <option>Oral Surgeon</option>
+                    <option>Prosthodontist</option>
+                  </select>
+                </div>
+              </div>
+
+              <div class="checkbox-row">
+                <input id="producer" type="checkbox" />
+                <label for="producer">Is this user a producer?</label>
+              </div>
+            </div>
+          </div>
+
+          <!-- Location -->
+          <div class="form-section">
+            <p class="section-label">Select Location</p>
+            <div class="form-grid">
+              <div class="field">
+                <label for="location1" class="visually-hidden">Location</label>
+                <div class="select-wrap">
+                  <select id="location1" name="location1">
+                    <option selected>Select</option>
+                    <option>California</option>
+                    <option>Texas</option>
+                    <option>Florida</option>
+                    <option>New York</option>
+                  </select>
+                </div>
+              </div>
+
+              <div class="field">
+                <label for="location2" class="visually-hidden">Location</label>
+                <div class="select-wrap">
+                  <select id="location2" name="location2">
+                    <option selected>Select</option>
+                    <option>Los Angeles</option>
+                    <option>Houston</option>
+                    <option>Miami</option>
+                    <option>New York City</option>
+                  </select>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Actions -->
+          <div class="actions">
+            <button type="button" class="btn btn-ghost">Cancel</button>
+            <button type="submit" class="btn btn-primary">Submit</button>
+          </div>
+        </form>
+      </section>
+    </main>
+  </body>
+</html>
